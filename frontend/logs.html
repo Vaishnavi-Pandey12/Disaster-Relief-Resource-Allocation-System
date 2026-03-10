@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Logs - DDR-SAS</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="logs">
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand"><div class="logo">🌍</div><h1>DDR-SAS<br/>Control Panel</h1></div>
+      <nav class="nav">
+        <a href="index.html">📊 Dashboard</a>
+        <a href="requests.html">📝 Add Request</a>
+        <a href="centers.html">🏥 Relief Centers</a>
+        <a href="allocation.html">🚚 Allocation</a>
+        <a href="logs.html">📜 Event Logs</a>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <div class="header"><h2>Event Logs</h2><div class="status">Audit trail and operational events</div></div>
+
+      <section class="panel">
+        <h3>System Logs</h3>
+        <table>
+          <thead><tr><th>Timestamp</th><th>Level</th><th>Message</th></tr></thead>
+          <tbody id="logsBody"></tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/api.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add Relief Request - DDR-SAS</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="requests">
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand"><div class="logo">🌍</div><h1>DDR-SAS<br/>Control Panel</h1></div>
+      <nav class="nav">
+        <a href="index.html">📊 Dashboard</a>
+        <a href="requests.html">📝 Add Request</a>
+        <a href="centers.html">🏥 Relief Centers</a>
+        <a href="allocation.html">🚚 Allocation</a>
+        <a href="logs.html">📜 Event Logs</a>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <div class="header"><h2>Add Relief Request</h2><div class="status">Submit new emergency demand</div></div>
+
+      <section class="panel">
+        <h3>Request Form</h3>
+        <form id="requestForm">
+          <div class="field full">
+            <label for="location">Location</label>
+            <input id="location" type="text" placeholder="e.g., North Camp" required />
+          </div>
+          <div class="field">
+            <label for="urgency">Urgency</label>
+            <select id="urgency">
+              <option>Low</option>
+              <option>Medium</option>
+              <option>High</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="foodNeeded">Food Needed</label>
+            <input id="foodNeeded" type="number" min="0" required />
+          </div>
+          <div class="field">
+            <label for="waterNeeded">Water Needed</label>
+            <input id="waterNeeded" type="number" min="0" required />
+          </div>
+          <div class="field">
+            <label for="medicineNeeded">Medicine Needed</label>
+            <input id="medicineNeeded" type="number" min="0" required />
+          </div>
+          <div class="field full">
+            <button class="btn-primary" type="submit">Submit Request</button>
+          </div>
+        </form>
+        <div id="requestMessage" class="message"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/api.js"></script>
+</body>
+</html>
