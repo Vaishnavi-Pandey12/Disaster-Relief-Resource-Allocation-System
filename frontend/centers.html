@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Relief Centers - DDR-SAS</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="centers">
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand"><div class="logo">🌍</div><h1>DDR-SAS<br/>Control Panel</h1></div>
+      <nav class="nav">
+        <a href="index.html">📊 Dashboard</a>
+        <a href="requests.html">📝 Add Request</a>
+        <a href="centers.html">🏥 Relief Centers</a>
+        <a href="allocation.html">🚚 Allocation</a>
+        <a href="logs.html">📜 Event Logs</a>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <div class="header"><h2>Relief Centers</h2><div class="status">Current stock inventory</div></div>
+
+      <section class="panel">
+        <h3>Centers Inventory</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Center Name</th>
+              <th>Location</th>
+              <th>Food Stock</th>
+              <th>Water Stock</th>
+              <th>Medicine Stock</th>
+            </tr>
+          </thead>
+          <tbody id="centersBody"></tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/api.js"></script>
+</body>
+</html>

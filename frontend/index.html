@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DDR-SAS Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="dashboard">
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand"><div class="logo">🌍</div><h1>DDR-SAS<br/>Control Panel</h1></div>
+      <nav class="nav">
+        <a href="index.html">📊 Dashboard</a>
+        <a href="requests.html">📝 Add Request</a>
+        <a href="centers.html">🏥 Relief Centers</a>
+        <a href="allocation.html">🚚 Allocation</a>
+        <a href="logs.html">📜 Event Logs</a>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <div class="header">
+        <h2>Disaster Management Dashboard</h2>
+        <div class="status">Live Operations Overview</div>
+      </div>
+
+      <section class="grid-cards">
+        <article class="card"><div class="label">Total Requests</div><div class="value" id="totalRequests">0</div></article>
+        <article class="card"><div class="label">Active Requests</div><div class="value" id="activeRequests">0</div></article>
+        <article class="card"><div class="label">Relief Centers</div><div class="value" id="centerCount">0</div></article>
+        <article class="card"><div class="label">System Status</div><div class="value" style="font-size:18px;color:#16a34a;">Operational</div></article>
+      </section>
+
+      <section class="panel">
+        <h3>Recent Allocation Logs</h3>
+        <table>
+          <thead>
+            <tr><th>Timestamp</th><th>Event</th></tr>
+          </thead>
+          <tbody id="recentLogsBody"></tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/api.js"></script>
+</body>
+</html>
